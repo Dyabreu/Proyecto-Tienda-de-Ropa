@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontEnd Store</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body-index">
+    <header class="header"> 
+        <a href="index.html">
+            <img class="header__logo" src="img/logo.png" alt="Logotipo">
+        </a>
+    </header>
+    <nav class="navegacion">
+        <div class="item_desplegable">        
+            <a class="navegacion__enlace" href="index.html">Tienda</a> 
+            <div class="menu">
+                <ul>
+                    <li><a href="camisetas.html">Camisetas</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                </ul>
+            </div>
+        </div>
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <div class="ofertas">
+    <div class="slider">
+        <div class="slides">
+            <!--radio buttons start-->
+            <input class="input" type="radio" name="radio-botn" id="radio1">
+            <input class="input" type="radio" name="radio-botn" id="radio2">
+            <input class="input"  type="radio" name="radio-botn" id="radio3">
+        <!--radio buttons end-->
+        <!--slide images start-->
+        <div class="slide first">
+            <img src="img/am1.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="img/am2.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="img/am3.jpg" alt="">
+        </div> 
+        <!--Fin slide images-->
+        <!--automatic navigation start-->
+        <div class="navigation-auto">
+            <div class="auto-botn1"></div>
+            <div class="auto-botn2"></div>
+            <div class="auto-botn3"></div>
+        </div> 
+        <!--automatic navigation end-->
+    </div> <!--slides end-->
+    <!--manual navigation start-->
+    <div class="navigation-manual">
+        <label for="radio1" class="manual-botn"></label>
+        <label for="radio2" class="manual-botn"></label>
+        <label for="radio3" class="manual-botn"></label>
+    </div> <!--navigation-manual ends-->
+    </div> <!--imagen slider end-->
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function() {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if(counter > 3) {
+                counter=1;
+            }
+        }, 5000);
+    </script>
+    </div>
+    <hr>
+
+<main class="contenedor">
+    <h1 class="titulo-productos">Nuestros Productos</h1>
+
+    <div class="categorias">
+        <div class="camisetas">
+                <img class="producto" src="img/camisetas.webp">
+            <a href="camisetas.html">Camisetas</a>
+        </div>
+        <div class="accesorios">
+                <img class="producto" src="img/accesorio1.webp">
+            <a href="accesorios.html">Accesorios</a>
+            </div>
+        </div> 
+        
+    </div>
+</main>
+
+<footer class="footer"> 
+    <p class="footer__texto"> Front End Store - Todos los derechos reservados 2022.</p>
+</footer>
+</body>
+</html>
